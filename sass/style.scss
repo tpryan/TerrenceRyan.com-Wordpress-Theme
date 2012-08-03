@@ -1,0 +1,202 @@
+/*
+Theme Name: TerrenceRyan.com
+Theme URI: http://terrenceryan.com/
+Author: Terrence Ryan
+Author URI: http://terrenceryan.com/
+Description: Based on the 2011 theme for WordPress is sophisticated, lightweight, and adaptable. Make it yours with a custom menu, header image, and background -- then go further with available theme options for light or dark color scheme, custom link colors, and three layout choices. Twenty Eleven comes equipped with a Showcase page template that transforms your front page into a showcase to show off your best content, widget support galore (sidebar, three footer areas, and a Showcase page widget area), and a custom "Ephemera" widget to display your Aside, Link, Quote, or Status posts. Included are styles for print and for the admin editor, support for featured images (as custom header images on posts and pages and as large images on featured "sticky" posts), and special styles for six different post formats.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: terrenceryan
+*/
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+@import 'all';
+@import 'meyer-reset';
+
+
+body{
+	font-family: "ACaslonPro-Regular", "adobe-caslon-pro";
+	font-weight: 400;
+	background-color: #FFF!important;
+}
+
+a{
+	color: #F00;
+	@include transition(color .1s ease-in);
+}	
+
+.heading {
+	font-family: "MyriadPro-SemiboldCond", "myriad-pro-condensed";
+}
+
+h1{
+	@extend .heading;
+	font-weight: 600;
+	font-variant: small-caps;
+}
+
+hr{
+	clear: both;
+    padding: 0;
+    border: none;
+    border-top: medium double #E00;
+    color: #E00;
+    text-align: center;
+    margin-top: 30px;
+}
+
+hr:after {
+    content: "§";
+    display: inline-block;
+    position: relative; 
+    top: -0.7em;  
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+    color: #E00;
+}
+
+p{
+	font-weight: 400;
+}
+
+header{
+	padding: 0 10px;
+	background-color: #000;
+
+	hgroup{
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+
+
+	h1{
+		color: #F00;
+		font-size: 50px;
+		a{
+			color: #F00;
+			text-decoration: none;
+		}
+	}
+
+	p{
+		color: #FFF;
+	}
+	img{
+		border: 1px solid #F00;
+	}
+
+	.skip_link{
+		display: none;
+	}
+}
+
+article{
+	background-color: #FFF;
+
+	header{
+		background-color: #FFF;
+		padding: 0 0 20px 0;
+	}
+
+	footer{
+		background-color: #FFF;
+		padding: 0 0 20px 0;
+	}
+
+	p{
+		line-height: 1.2;
+		padding-bottom: 10px;
+	}
+
+}
+
+
+nav{
+	@extend .heading;
+	font-weight: 700;
+	font-size: 25px;
+	a{
+		&:link{color: #FF0000; text-decoration: none;}
+		&:visited{color: #FF0000; text-decoration: none;}
+		&:hover{color: #555555;text-decoration:underline;}
+		&:active{color: #FF0000;text-decoration:underline;}
+	}
+}
+
+#main{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 10px;
+	section{
+		margin-bottom: 20px;
+		h1{
+			font-size: 40px;
+			font-variant: normal;
+			a{
+				color: #000;
+				text-decoration: none;
+			}
+		}
+
+		article{
+			margin-bottom: 5px;
+			line-height: 1.5;
+			h1{
+				font-size: 25px;
+				color: #F00;
+				a{
+					
+					&:link{color: #FF0000; text-decoration: none;}
+					&:visited{color: #FF0000; text-decoration: none;}
+					&:hover{color: #555555;text-decoration:underline;}
+					&:active{color: #FF0000;text-decoration:underline;}
+				}
+				
+			}
+		}
+	}
+}
+
+footer{
+	padding: 0 10px 20px 10px;
+	background-color: #000;
+	p{
+		color: #FFF;
+	}
+
+	nav{
+		padding-top: 10px;
+	}
+	small{
+		padding-top: 15px;
+		color: #FFF;
+		display: block;
+	}
+	#copyright{
+		color: #F00;
+	}
+
+}
+
+#access{
+	display: none;
+}
+
+
+@media screen and (max-width: 500px) {
+	@import 'phone';
+}
+
+// @media screen and (min-width: 768px) {
+// 	@import 'tablet';
+// } 
+
+@media screen and (min-width: 1000px) {
+	//@import 'desktop'
+} 
