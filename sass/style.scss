@@ -67,6 +67,7 @@ p{
 header{
 	padding: 0 10px;
 	background-color: #000;
+	color: #FFF;
 
 	hgroup{
 		max-width: 1000px;
@@ -102,6 +103,7 @@ article{
 	header{
 		background-color: #FFF;
 		padding: 0 0 20px 0;
+		color: #000;
 	}
 
 	footer{
@@ -114,8 +116,26 @@ article{
 		padding-bottom: 10px;
 	}
 
+		
+
 }
 
+#nav-above{
+	h3{
+		display:none;
+	}
+	font-size: 20px;
+	padding: 10px 0 20px 0;
+	.nav-previous{
+		display: table-cell;
+		padding-right: 20px;
+
+	}
+
+	 .nav-next{
+		display: table-cell;
+	}
+}
 
 nav{
 	@extend .heading;
@@ -164,6 +184,12 @@ nav{
 }
 
 footer{
+
+	#supplementary{
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
 	padding: 0 10px 20px 10px;
 	background-color: #000;
 	p{
@@ -184,6 +210,8 @@ footer{
 
 }
 
+
+
 #access{
 	display: none;
 }
@@ -193,10 +221,10 @@ footer{
 	@import 'phone';
 }
 
-// @media screen and (min-width: 768px) {
-// 	@import 'tablet';
-// } 
+@media screen and (min-width: 768px) {
+	@import 'tablet';
+} 
 
 @media screen and (min-width: 1000px) {
-	//@import 'desktop'
+	@import 'desktop'
 } 

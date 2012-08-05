@@ -1,0 +1,49 @@
+
+body{
+	font-size: 1.1em;
+}
+
+header{
+	padding-top: 10px;	
+	hgroup{
+		max-width: 768px;	
+		h1{
+			display: inline-block;
+			width: 300px;
+			margin: 0;
+		}
+		h2{
+			display: inline-block;
+			padding: 5px 0 0 0;
+			margin: 0;
+			vertical-align: top;
+			width: 350px;
+
+		}
+		nav{
+			vertical-align: top;
+			display: inline-block;
+			margin: 0;
+			width: 100px;
+			text-align: right;
+		}
+	}
+}
+
+#main{
+	max-width: 768px;
+}	
+
+article{
+	font-size: 1.2em;
+	p{
+		line-height: 1.6;
+		padding-bottom: 30px;
+	}
+}
+
+footer{
+	#supplementary{
+		max-width: 768px;
+	}
+}

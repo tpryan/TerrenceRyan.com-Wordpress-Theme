@@ -88,7 +88,8 @@ p {
 
 header {
   padding: 0 10px;
-  background-color: #000; }
+  background-color: #000;
+  color: #FFF; }
   header hgroup {
     max-width: 1000px;
     margin: 0 auto; }
@@ -109,13 +110,25 @@ article {
   background-color: #FFF; }
   article header {
     background-color: #FFF;
-    padding: 0 0 20px 0; }
+    padding: 0 0 20px 0;
+    color: #000; }
   article footer {
     background-color: #FFF;
     padding: 0 0 20px 0; }
   article p {
     line-height: 1.2;
     padding-bottom: 10px; }
+
+#nav-above {
+  font-size: 20px;
+  padding: 10px 0 20px 0; }
+  #nav-above h3 {
+    display: none; }
+  #nav-above .nav-previous {
+    display: table-cell;
+    padding-right: 20px; }
+  #nav-above .nav-next {
+    display: table-cell; }
 
 nav {
   font-weight: 700;
@@ -167,6 +180,9 @@ nav {
 footer {
   padding: 0 10px 20px 10px;
   background-color: #000; }
+  footer #supplementary {
+    max-width: 1000px;
+    margin: 0 auto; }
   footer p {
     color: #FFF; }
   footer nav {
@@ -192,3 +208,75 @@ footer {
 
   .hidesmall {
     display: none; } }
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.1em; }
+
+  header {
+    padding-top: 10px; }
+    header hgroup {
+      max-width: 768px; }
+      header hgroup h1 {
+        display: inline-block;
+        width: 300px;
+        margin: 0; }
+      header hgroup h2 {
+        display: inline-block;
+        padding: 5px 0 0 0;
+        margin: 0;
+        vertical-align: top;
+        width: 350px; }
+      header hgroup nav {
+        vertical-align: top;
+        display: inline-block;
+        margin: 0;
+        width: 100px;
+        text-align: right; }
+
+  #main {
+    max-width: 768px; }
+
+  article {
+    font-size: 1.2em; }
+    article p {
+      line-height: 1.6;
+      padding-bottom: 30px; }
+
+  footer #supplementary {
+    max-width: 768px; } }
+@media screen and (min-width: 1000px) {
+  body {
+    font-size: 1.2em; }
+
+  header {
+    padding-top: 10px; }
+    header hgroup {
+      max-width: 1000px; }
+      header hgroup h1 {
+        display: inline-block;
+        width: 390px;
+        margin: 0; }
+      header hgroup h2 {
+        display: inline-block;
+        padding: 5px 0 0 0;
+        margin: 0;
+        vertical-align: top;
+        width: 390px; }
+      header hgroup nav {
+        vertical-align: top;
+        display: inline-block;
+        margin: 0;
+        width: 190px;
+        text-align: right; }
+
+  #main {
+    max-width: 1000px; }
+
+  article {
+    font-size: 1.4em; }
+    article p {
+      line-height: 1.6;
+      padding-bottom: 30px; }
+
+  footer #supplementary {
+    max-width: 1000px; } }
