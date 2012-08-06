@@ -39,6 +39,19 @@ h1{
 	font-variant: small-caps;
 }
 
+h2{
+	@extend .heading;
+	font-weight: 600;
+	font-variant: small-caps;
+	
+}
+
+h3{
+	@extend .heading;
+	font-weight: 600;
+	font-variant: small-caps;
+}
+
 hr{
 	clear: both;
     padding: 0;
@@ -73,7 +86,14 @@ header{
 		max-width: 1000px;
 		margin: 0 auto;
 	}
-
+	nav{
+		padding: 10px 0;
+		ul{
+			li{
+				display: inline-block;
+			}
+		}
+	}
 
 
 	h1{
@@ -109,6 +129,7 @@ article{
 	footer{
 		background-color: #FFF;
 		padding: 0 0 20px 0;
+		color: #000;
 	}
 
 	p{
@@ -116,7 +137,23 @@ article{
 		padding-bottom: 10px;
 	}
 
-		
+}
+
+section{
+	background-color: #FFF;
+
+	header{
+		background-color: #FFF;
+		padding: 10px 0 10px 0;
+		color: #000;
+	}
+
+	footer{
+		background-color: #FFF;
+		padding: 0 0 20px 0;
+		color: #000;
+	}
+
 
 }
 
@@ -184,7 +221,10 @@ nav{
 }
 
 footer{
-
+	h2,h3{
+		font-size: 1.5em;
+		padding-top: 10px;
+	}
 	#supplementary{
 		max-width: 1000px;
 		margin: 0 auto;
@@ -192,6 +232,7 @@ footer{
 
 	padding: 0 10px 20px 10px;
 	background-color: #000;
+	color: #FFF;
 	p{
 		color: #FFF;
 	}
@@ -207,6 +248,22 @@ footer{
 	#copyright{
 		color: #F00;
 	}
+
+	#first, #second, #third{
+		display: table-cell;
+	}
+
+	#first{
+		//width: 20%;
+	}
+	#second{
+		width: 20%;
+	}
+
+	#third{
+		width: 30%;
+	}
+
 
 }
 
@@ -225,6 +282,6 @@ footer{
 	@import 'tablet';
 } 
 
-@media screen and (min-width: 1000px) {
-	@import 'desktop'
-} 
+// @media screen and (min-width: 1000px) {
+// 	@import 'desktop'
+// } 

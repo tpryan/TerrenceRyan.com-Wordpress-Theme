@@ -57,10 +57,18 @@ a {
   -webkit-transition: color 0.1s ease-in;
   transition: color 0.1s ease-in; }
 
-.heading, h1, nav {
+.heading, h1, h2, h3, nav {
   font-family: "MyriadPro-SemiboldCond", "myriad-pro-condensed"; }
 
 h1 {
+  font-weight: 600;
+  font-variant: small-caps; }
+
+h2 {
+  font-weight: 600;
+  font-variant: small-caps; }
+
+h3 {
   font-weight: 600;
   font-variant: small-caps; }
 
@@ -93,6 +101,10 @@ header {
   header hgroup {
     max-width: 1000px;
     margin: 0 auto; }
+  header nav {
+    padding: 10px 0; }
+    header nav ul li {
+      display: inline-block; }
   header h1 {
     color: #F00;
     font-size: 50px; }
@@ -114,10 +126,22 @@ article {
     color: #000; }
   article footer {
     background-color: #FFF;
-    padding: 0 0 20px 0; }
+    padding: 0 0 20px 0;
+    color: #000; }
   article p {
     line-height: 1.2;
     padding-bottom: 10px; }
+
+section {
+  background-color: #FFF; }
+  section header {
+    background-color: #FFF;
+    padding: 10px 0 10px 0;
+    color: #000; }
+  section footer {
+    background-color: #FFF;
+    padding: 0 0 20px 0;
+    color: #000; }
 
 #nav-above {
   font-size: 20px;
@@ -179,7 +203,11 @@ nav {
 
 footer {
   padding: 0 10px 20px 10px;
-  background-color: #000; }
+  background-color: #000;
+  color: #FFF; }
+  footer h2, footer h3 {
+    font-size: 1.5em;
+    padding-top: 10px; }
   footer #supplementary {
     max-width: 1000px;
     margin: 0 auto; }
@@ -193,6 +221,12 @@ footer {
     display: block; }
   footer #copyright {
     color: #F00; }
+  footer #first, footer #second, footer #third {
+    display: table-cell; }
+  footer #second {
+    width: 20%; }
+  footer #third {
+    width: 30%; }
 
 #access {
   display: none; }
@@ -200,11 +234,12 @@ footer {
 @media screen and (max-width: 500px) {
   header {
     padding: 0 10px; }
-    header nav ul li {
-      display: table-cell;
-      padding: 5px 20px 10px 0px; }
-    header nav img {
-      display: none; }
+    header nav {
+      padding: 5px 0; }
+      header nav ul li {
+        padding: 5px 20px 10px 0px; }
+      header nav img {
+        display: none; }
 
   .hidesmall {
     display: none; } }
@@ -217,10 +252,12 @@ footer {
     header hgroup {
       max-width: 768px; }
       header hgroup h1 {
+        font-size: 3.3em;
         display: inline-block;
         width: 300px;
         margin: 0; }
       header hgroup h2 {
+        font-size: 1.3em;
         display: inline-block;
         padding: 5px 0 0 0;
         margin: 0;
@@ -229,9 +266,12 @@ footer {
       header hgroup nav {
         vertical-align: top;
         display: inline-block;
+        padding: 0 0 5px 0;
         margin: 0;
         width: 100px;
         text-align: right; }
+        header hgroup nav ul li {
+          display: block; }
 
   #main {
     max-width: 768px; }
@@ -244,39 +284,3 @@ footer {
 
   footer #supplementary {
     max-width: 768px; } }
-@media screen and (min-width: 1000px) {
-  body {
-    font-size: 1.2em; }
-
-  header {
-    padding-top: 10px; }
-    header hgroup {
-      max-width: 1000px; }
-      header hgroup h1 {
-        display: inline-block;
-        width: 390px;
-        margin: 0; }
-      header hgroup h2 {
-        display: inline-block;
-        padding: 5px 0 0 0;
-        margin: 0;
-        vertical-align: top;
-        width: 390px; }
-      header hgroup nav {
-        vertical-align: top;
-        display: inline-block;
-        margin: 0;
-        width: 190px;
-        text-align: right; }
-
-  #main {
-    max-width: 1000px; }
-
-  article {
-    font-size: 1.4em; }
-    article p {
-      line-height: 1.6;
-      padding-bottom: 30px; }
-
-  footer #supplementary {
-    max-width: 1000px; } }
