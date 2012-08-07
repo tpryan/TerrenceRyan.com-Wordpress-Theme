@@ -24,6 +24,10 @@ body{
 	background-color: #FFF!important;
 }
 
+strong{
+	font-weight: 700;
+}
+
 a{
 	color: #F00;
 	@include transition(color .1s ease-in);
@@ -137,6 +141,34 @@ article{
 		padding-bottom: 10px;
 	}
 
+	/* Comments link */
+	.entry-header{ 
+		position: relative;
+		.comments-link{  
+			a {
+				background: #eee url(images/comment-bubble.png) no-repeat;
+				color: #666;
+				font-size: 13px;
+				font-weight: normal;
+				line-height: 35px;
+				overflow: hidden;
+				padding: 0 0 0;
+				position: absolute;
+				top: .2em;
+				right: 0;
+				text-align: center;
+				text-decoration: none;
+				width: 43px;
+				height: 36px;
+
+				&:focus, &:hover, &:active{
+					background-color: #1982d1;
+					color: #fff;
+					color: rgba(255,255,255,0.8);
+				}
+			}
+		}		
+	}
 }
 
 section{

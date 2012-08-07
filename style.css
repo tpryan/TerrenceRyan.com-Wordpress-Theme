@@ -49,6 +49,9 @@ body {
   font-weight: 400;
   background-color: #FFF!important; }
 
+strong {
+  font-weight: 700; }
+
 a {
   color: #F00;
   -moz-transition: color 0.1s ease-in;
@@ -119,7 +122,8 @@ header {
     display: none; }
 
 article {
-  background-color: #FFF; }
+  background-color: #FFF;
+  /* Comments link */ }
   article header {
     background-color: #FFF;
     padding: 0 0 20px 0;
@@ -131,6 +135,27 @@ article {
   article p {
     line-height: 1.2;
     padding-bottom: 10px; }
+  article .entry-header {
+    position: relative; }
+    article .entry-header .comments-link a {
+      background: #eeeeee url(images/comment-bubble.png) no-repeat;
+      color: #666;
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 35px;
+      overflow: hidden;
+      padding: 0 0 0;
+      position: absolute;
+      top: .2em;
+      right: 0;
+      text-align: center;
+      text-decoration: none;
+      width: 43px;
+      height: 36px; }
+      article .entry-header .comments-link a:focus, article .entry-header .comments-link a:hover, article .entry-header .comments-link a:active {
+        background-color: #1982d1;
+        color: #fff;
+        color: rgba(255, 255, 255, 0.8); }
 
 section {
   background-color: #FFF; }
