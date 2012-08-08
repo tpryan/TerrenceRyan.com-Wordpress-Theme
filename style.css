@@ -52,13 +52,26 @@ body {
 strong {
   font-weight: 700; }
 
+em {
+  font-style: italic; }
+
 a {
   color: #F00;
+  text-decoration: none;
   -moz-transition: color 0.1s ease-in;
   -o-transition: color 0.1s ease-in;
   -ms-transition: color 0.1s ease-in;
   -webkit-transition: color 0.1s ease-in;
   transition: color 0.1s ease-in; }
+
+a:active {
+  color: #666666; }
+
+a:hover {
+  color: #666666; }
+
+a:visited {
+  color: #EE0000; }
 
 .heading, h1, h2, h3, nav {
   font-family: "MyriadPro-SemiboldCond", "myriad-pro-condensed"; }
@@ -69,7 +82,14 @@ h1 {
 
 h2 {
   font-weight: 600;
-  font-variant: small-caps; }
+  font-variant: small-caps;
+  font-size: 1.6em;
+  margin-bottom: 1em; }
+
+#content > h2 {
+  font-size: 2.3em;
+  margin-top: .5em;
+  margin-bottom: .5em; }
 
 h3 {
   font-weight: 600;
@@ -97,6 +117,38 @@ hr:after {
 p {
   font-weight: 400; }
 
+ul {
+  list-style: disc;
+  padding-left: 40px;
+  padding-bottom: 20px; }
+  ul li {
+    padding-left: 5px;
+    line-height: 1.2;
+    padding-bottom: 15px; }
+
+ol {
+  list-style: decimal;
+  padding-left: 40px;
+  padding-bottom: 20px; }
+  ol li {
+    padding-left: 5px;
+    line-height: 1.2;
+    padding-bottom: 15px; }
+
+blockquote {
+  display: block;
+  padding: .5em 2em .1em 2em;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #F00;
+  border-left: 3px solid #F00;
+  border-top: 1px solid #EEE;
+  border-right: 1px solid #EEE;
+  border-bottom: 1px solid #EEE;
+  background-color: #F3F3F3; }
+  blockquote p {
+    margin-top: 10px; }
+
 header {
   padding: 0 10px;
   background-color: #000;
@@ -106,11 +158,15 @@ header {
     margin: 0 auto; }
   header nav {
     padding: 10px 0; }
-    header nav ul li {
-      display: inline-block; }
+    header nav ul {
+      padding-bottom: 0; }
+      header nav ul li {
+        display: inline-block;
+        line-height: 1;
+        padding-bottom: 0; }
   header h1 {
     color: #F00;
-    font-size: 50px; }
+    font-size: 2.4em; }
     header h1 a {
       color: #F00;
       text-decoration: none; }
@@ -123,7 +179,7 @@ header {
 
 article {
   background-color: #FFF;
-  /* Comments link */ }
+  position: relative; }
   article header {
     background-color: #FFF;
     padding: 0 0 20px 0;
@@ -132,11 +188,33 @@ article {
     background-color: #FFF;
     padding: 0 0 20px 0;
     color: #000; }
-  article p {
+  article p, article div {
     line-height: 1.2;
     padding-bottom: 10px; }
+  article .entry-meta .edit-link a,
+  article .commentlist .edit-link a {
+    background: #eee;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #666;
+    float: right;
+    font-size: 12px;
+    line-height: 1.5em;
+    font-weight: 300;
+    text-decoration: none;
+    padding: 0 8px; }
+  article .entry-meta .edit-link a:hover,
+  article .commentlist .edit-link a:hover {
+    background: #888;
+    color: #fff; }
+  article .entry-content .edit-link {
+    clear: both;
+    display: block; }
   article .entry-header {
     position: relative; }
+    article .entry-header h1 {
+      margin-right: 3em;
+      margin-bottom: .2em; }
     article .entry-header .comments-link a {
       background: #eeeeee url(images/comment-bubble.png) no-repeat;
       color: #666;
@@ -168,16 +246,16 @@ section {
     padding: 0 0 20px 0;
     color: #000; }
 
-#nav-above {
-  font-size: 20px;
+#nav-above, #nav-single {
+  font-size: 1em;
   padding: 10px 0 20px 0; }
-  #nav-above h3 {
-    display: none; }
-  #nav-above .nav-previous {
-    display: table-cell;
-    padding-right: 20px; }
-  #nav-above .nav-next {
-    display: table-cell; }
+
+.nav-previous {
+  display: table-cell;
+  padding-right: 20px; }
+
+.nav-next {
+  display: table-cell; }
 
 nav {
   font-weight: 700;
@@ -248,13 +326,289 @@ footer {
     color: #F00; }
   footer #first, footer #second, footer #third {
     display: table-cell; }
+    footer #first ul, footer #second ul, footer #third ul {
+      list-style: none;
+      padding-left: 0; }
+      footer #first ul li, footer #second ul li, footer #third ul li {
+        padding-left: 0;
+        padding-bottom: 5px; }
   footer #second {
     width: 20%; }
   footer #third {
     width: 30%; }
 
+.assistive-text {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+
 #access {
   display: none; }
+
+/* Comment Form */
+#respond {
+  background: #ddd;
+  border: 1px solid #d3d3d3;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 auto 2em auto;
+  padding: 1.625em;
+  position: relative;
+  width: 40.5em; }
+
+#respond input[type="text"],
+#respond textarea {
+  background: #fff;
+  border: 4px solid #eee;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(204, 204, 204, 0.95);
+  -moz-box-shadow: inset 0 1px 3px rgba(204, 204, 204, 0.95);
+  box-shadow: inset 0 1px 3px rgba(204, 204, 204, 0.95);
+  position: relative;
+  padding: 10px;
+  text-indent: 80px; }
+
+#respond .comment-form-author,
+#respond .comment-form-email,
+#respond .comment-form-url,
+#respond .comment-form-comment {
+  position: relative; }
+
+#respond .comment-form-author label,
+#respond .comment-form-email label,
+#respond .comment-form-url label,
+#respond .comment-form-comment label {
+  background: #eee;
+  -webkit-box-shadow: 1px 2px 2px rgba(204, 204, 204, 0.8);
+  -moz-box-shadow: 1px 2px 2px rgba(204, 204, 204, 0.8);
+  box-shadow: 1px 2px 2px rgba(204, 204, 204, 0.8);
+  color: #555;
+  display: inline-block;
+  font-size: 13px;
+  left: 4px;
+  min-width: 60px;
+  padding: 4px 10px;
+  position: relative;
+  top: 40px;
+  z-index: 1; }
+
+#respond input[type="text"]:focus,
+#respond textarea:focus {
+  text-indent: 0;
+  z-index: 1; }
+
+#respond textarea {
+  resize: vertical;
+  width: 95%; }
+
+#respond .comment-form-author .required,
+#respond .comment-form-email .required {
+  color: #bd3500;
+  font-size: 22px;
+  font-weight: bold;
+  left: 75%;
+  position: absolute;
+  top: 45px;
+  z-index: 1; }
+
+#respond .comment-notes,
+#respond .logged-in-as {
+  font-size: 13px; }
+
+#respond p {
+  margin: 10px 0; }
+
+#respond .form-submit {
+  float: right;
+  margin: -20px 0 10px; }
+
+#respond input#submit {
+  background: #222;
+  border: none;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  color: #eee;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 20px 0;
+  padding: 5px 42px 5px 22px;
+  position: relative;
+  left: 30px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3); }
+
+#respond input#submit:active {
+  background: #1982d1;
+  color: #bfddf3; }
+
+#respond #cancel-comment-reply-link {
+  color: #666;
+  margin-left: 10px;
+  text-decoration: none; }
+
+#respond .logged-in-as a:hover,
+#respond #cancel-comment-reply-link:hover {
+  text-decoration: underline; }
+
+#reply-title {
+  color: #373737;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px; }
+
+comments-title {
+  color: #666;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 2.6em;
+  padding: 0 0 2.6em;
+  text-transform: uppercase; }
+
+.nopassword,
+.nocomments {
+  color: #aaa;
+  font-size: 24px;
+  font-weight: 100;
+  margin: 26px 0;
+  text-align: center; }
+
+.commentlist {
+  list-style: none;
+  margin: 0 auto;
+  width: 68.9%;
+  padding-left: 0; }
+
+.content .commentlist,
+.page-template-sidebar-page-php .commentlist {
+  width: 100%;
+  /* reset the width for the one-column and sidebar page layout */ }
+
+.commentlist > li.comment {
+  background: #f6f6f6;
+  border: 1px solid #ddd;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 0 1.625em;
+  padding: 1.625em;
+  position: relative; }
+
+.comment article {
+  background: #f6f6f6; }
+.comment footer {
+  background: #f6f6f6; }
+
+.commentlist .pingback {
+  margin: 0 0 1.625em;
+  padding: 0 1.625em; }
+
+.commentlist .children {
+  list-style: none;
+  margin: 0; }
+
+.commentlist .children li.comment {
+  background: #fff;
+  border-left: 1px solid #ddd;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  margin: 1.625em 0 0;
+  padding: 1.625em;
+  position: relative; }
+
+.commentlist .children li.comment .fn {
+  display: block; }
+
+.comment-meta .fn {
+  font-style: normal; }
+
+.comment-meta {
+  color: #666;
+  font-size: 12px;
+  line-height: 2.2em; }
+
+.commentlist .children li.comment .comment-meta {
+  line-height: 1.625em;
+  margin-left: 50px; }
+
+.commentlist .children li.comment .comment-content {
+  margin: 1.625em 0 0; }
+
+.comment-meta a {
+  font-weight: bold; }
+
+.commentlist .avatar {
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px #ccc;
+  -moz-box-shadow: 0 1px 2px #ccc;
+  box-shadow: 0 1px 2px #ccc;
+  left: -102px;
+  padding: 0;
+  position: absolute;
+  top: 0; }
+
+.commentlist > li.pingback:before {
+  content: ''; }
+
+.commentlist .children .avatar {
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  left: 2.2em;
+  padding: 0;
+  top: 2.2em; }
+
+a.comment-reply-link {
+  background: #eee;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #666;
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 8px;
+  text-decoration: none; }
+
+a.comment-reply-link:hover,
+a.comment-reply-link:focus,
+a.comment-reply-link:active {
+  background: #888;
+  color: #fff; }
+
+a.comment-reply-link > span {
+  display: inline-block;
+  position: relative;
+  top: -1px; }
+
+/* Post author highlighting */
+.commentlist > li.bypostauthor {
+  background: #ddd;
+  border-color: #d3d3d3; }
+
+.commentlist > li.bypostauthor .comment-meta {
+  color: #575757; }
+
+.commentlist > li.bypostauthor:before {
+  content: url(images/comment-arrow-bypostauthor.png); }
+
+/* Post Author threaded comments */
+.commentlist .children > li.bypostauthor {
+  background: #ddd;
+  border-color: #d3d3d3; }
+
+/* sidebar-page.php comments */
+/* Make sure we have room for our comment avatars */
+.page-template-sidebar-page-php .commentlist > li.comment,
+.page-template-sidebar-page-php.commentlist .pingback {
+  margin-left: 102px;
+  width: auto; }
+
+/* And a full-width comment form */
+.page-template-sidebar-page-php #respond {
+  width: auto; }
 
 @media screen and (max-width: 500px) {
   header {
@@ -268,6 +622,22 @@ footer {
 
   .hidesmall {
     display: none; } }
+@media screen and (max-width: 767px) {
+  hgroup h2 {
+    margin-bottom: 0; }
+
+  nav ul {
+    padding-left: 0; }
+    nav ul li {
+      padding-left: 0;
+      padding-right: 10px; }
+
+  /* Comment Form */
+  #respond {
+    margin: 0 auto 2em auto;
+    padding: .1em;
+    position: relative;
+    width: 100%; } }
 @media screen and (min-width: 768px) {
   body {
     font-size: 1.1em; }
@@ -279,7 +649,7 @@ footer {
       header hgroup h1 {
         font-size: 3.3em;
         display: inline-block;
-        width: 300px;
+        width: 350px;
         margin: 0; }
       header hgroup h2 {
         font-size: 1.3em;
@@ -287,16 +657,19 @@ footer {
         padding: 5px 0 0 0;
         margin: 0;
         vertical-align: top;
-        width: 350px; }
-      header hgroup nav {
-        vertical-align: top;
-        display: inline-block;
-        padding: 0 0 5px 0;
-        margin: 0;
-        width: 100px;
-        text-align: right; }
-        header hgroup nav ul li {
-          display: block; }
+        width: 300px; }
+
+  nav {
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 0 5px 0;
+    margin: 0;
+    width: 100px;
+    text-align: right; }
+    nav ul {
+      padding-left: 0; }
+      nav ul li {
+        display: block; }
 
   #main {
     max-width: 768px; }

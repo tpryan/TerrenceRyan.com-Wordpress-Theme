@@ -16,6 +16,7 @@ get_header(); ?>
 
 		<div id="primary">
 			<div id="content" role="main">
+			<h2>Recent Posts</h2>	
 
 			<?php if ( have_posts() ) : ?>
 
