@@ -213,7 +213,7 @@ article {
   article .entry-header {
     position: relative; }
     article .entry-header h1 {
-      margin-right: 3em;
+      margin-right: 2em;
       margin-bottom: .2em; }
     article .entry-header .comments-link a {
       background: #eeeeee url(images/comment-bubble.png) no-repeat;
@@ -637,7 +637,10 @@ a.comment-reply-link > span {
     margin: 0 auto 2em auto;
     padding: .1em;
     position: relative;
-    width: 100%; } }
+    width: 100%; }
+
+  .entry-header {
+    padding-bottom: 0; } }
 @media screen and (min-width: 768px) {
   body {
     font-size: 1.1em; }
@@ -658,18 +661,17 @@ a.comment-reply-link > span {
         margin: 0;
         vertical-align: top;
         width: 300px; }
-
-  nav {
-    vertical-align: top;
-    display: inline-block;
-    padding: 0 0 5px 0;
-    margin: 0;
-    width: 100px;
-    text-align: right; }
-    nav ul {
-      padding-left: 0; }
-      nav ul li {
-        display: block; }
+      header hgroup nav {
+        vertical-align: top;
+        display: inline-block;
+        padding: 0 0 5px 0;
+        margin: 0;
+        width: 100px;
+        text-align: right; }
+        header hgroup nav ul {
+          padding-left: 0; }
+          header hgroup nav ul li {
+            display: block; }
 
   #main {
     max-width: 768px; }
