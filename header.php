@@ -88,9 +88,9 @@
 					</h2>
 					<nav>
 						<ul>
-							<li><a href="http://new.terrenceryan.dev">Home</a></li>
+							<li><a href="http://new.terrenceryan.com">Home</a></li>
 							<li><a href="/">Blog</a></li>
-							<li><a href="http://new.terrenceryan.dev/about">About</a></li>	
+							<li><a href="http://new.terrenceryan.com/about">About</a></li>	
 						</ul>
 					</nav>
 			</hgroup>
