@@ -24,6 +24,11 @@ body{
 	background-color: #FFF!important;
 }
 
+$mono: "inconsolata", "consolas", monospace;
+code{
+	font-family: $mono;
+}
+
 strong{
 	font-weight: 700;
 }
