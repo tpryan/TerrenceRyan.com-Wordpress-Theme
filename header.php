@@ -74,16 +74,16 @@
 	<header id="branding" role="banner">
 			<hgroup>
 				<hgroup>
-					<h1><a href="/">TerrenceRyan.com</a></h1>
+					<h1><a href="http://terrenceryan.dev">TerrenceRyan.com</a></h1>
 					<h2>I'm a 35 year old redhead geek from Philly. <br /> 
-						<span class="hidesmall">I'm an Evangelist for <a href="/job">Adobe</a>.<br />
-						Also wrote <a href="/book">Driving Technical Change</a></span>
+						<span class="hidesmall">I'm an Evangelist for <a href="http://terrenceryan.dev/job">Adobe</a>.<br />
+						Also wrote <a href="http://terrenceryan.dev/book">Driving Technical Change</a></span>
 					</h2>
 					<nav>
 						<ul>
-							<li><a href="http://new.terrenceryan.com">Home</a></li>
+							<li><a href="http://terrenceryan.dev">Home</a></li>
 							<li><a href="/">Blog</a></li>
-							<li><a href="http://new.terrenceryan.com/about">About</a></li>	
+							<li><a href="http://terrenceryan.dev/about">About</a></li>	
 						</ul>
 					</nav>
 			</hgroup>
