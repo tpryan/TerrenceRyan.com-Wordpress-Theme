@@ -19,7 +19,7 @@ Text Domain: terrenceryan
 
 
 body{
-	font-family: "ACaslonPro-Regular", "adobe-caslon-pro";
+	font-family: "adobe-caslon-pro","Droid Serif", Georgria, "Times New Roman", serif;
 	font-weight: 400;
 	background-color: #FFF!important;
 }
@@ -47,7 +47,7 @@ a:hover {color: #666666; }
 a:visited {color: #EE0000; }
 
 .heading {
-	font-family: "MyriadPro-SemiboldCond", "myriad-pro-condensed";
+	font-family: "myriad-pro-condensed", "Droid Sans", sans-serif;
 }
 
 h1{
@@ -59,7 +59,7 @@ h1{
 
 h2{
 	@extend .heading;
-	font-weight: 600;
+	font-weight: 400;
 	font-variant: small-caps;
 	font-size: 1.6em;
 	margin-bottom: 1em;
@@ -155,6 +155,7 @@ header{
 	}
 	nav{
 		padding: 10px 0;
+		font-weight: 400;
 		ul{
 			padding-bottom: 0;
 			li{

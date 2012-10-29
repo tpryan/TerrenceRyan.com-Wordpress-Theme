@@ -45,7 +45,7 @@ table {
   border-spacing: 0; }
 
 body {
-  font-family: "ACaslonPro-Regular", "adobe-caslon-pro";
+  font-family: "adobe-caslon-pro","Droid Serif", Georgria, "Times New Roman", serif;
   font-weight: 400;
   background-color: #FFF!important; }
 
@@ -77,14 +77,14 @@ a:visited {
   color: #EE0000; }
 
 .heading, h1, h2, h3, nav {
-  font-family: "MyriadPro-SemiboldCond", "myriad-pro-condensed"; }
+  font-family: "myriad-pro-condensed", "Droid Sans", sans-serif; }
 
 h1 {
   font-weight: 600;
   font-variant: small-caps; }
 
 h2 {
-  font-weight: 600;
+  font-weight: 400;
   font-variant: small-caps;
   font-size: 1.6em;
   margin-bottom: 1em; }
@@ -160,7 +160,8 @@ header {
     max-width: 1000px;
     margin: 0 auto; }
   header nav {
-    padding: 10px 0; }
+    padding: 10px 0;
+    font-weight: 400; }
     header nav ul {
       padding-bottom: 0; }
       header nav ul li {
