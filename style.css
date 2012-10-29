@@ -624,7 +624,11 @@ a.comment-reply-link > span {
 
   #respond input[type="text"],
   #respond textarea {
-    width: 85%; } }
+    width: 85%; }
+
+  article p, article div {
+    line-height: 1.5;
+    font-size: 1.2em; } }
 @media screen and (max-width: 767px) {
   hgroup h2 {
     margin-bottom: 0; }
