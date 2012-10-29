@@ -646,7 +646,10 @@ a.comment-reply-link > span {
 
   #respond input[type="text"],
   #respond textarea {
-    width: 85%; } }
+    width: 85%; }
+
+  footer #first, footer #second, footer #third {
+    display: block; } }
 @media screen and (min-width: 768px) {
   body {
     font-size: 1.1em; }
@@ -658,7 +661,7 @@ a.comment-reply-link > span {
       header hgroup h1 {
         font-size: 3.3em;
         display: inline-block;
-        width: 350px;
+        width: 340px;
         margin: 0; }
       header hgroup h2 {
         font-size: 1.3em;
@@ -666,13 +669,13 @@ a.comment-reply-link > span {
         padding: 5px 0 0 0;
         margin: 0;
         vertical-align: top;
-        width: 300px; }
+        width: 280px; }
       header hgroup nav {
         vertical-align: top;
         display: inline-block;
         padding: 0 0 5px 0;
         margin: 0;
-        width: 100px;
+        width: 110px;
         text-align: right; }
         header hgroup nav ul {
           padding-left: 0; }
@@ -689,4 +692,8 @@ a.comment-reply-link > span {
       padding-bottom: 30px; }
 
   footer #supplementary {
-    max-width: 768px; } }
+    max-width: 768px; }
+
+  /* Comment Form */
+  #respond {
+    max-width: 668px; } }

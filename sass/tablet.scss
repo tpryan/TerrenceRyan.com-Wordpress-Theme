@@ -10,7 +10,7 @@ header{
 		h1{
 			font-size: 3.3em;
 			display: inline-block;
-			width: 350px;
+			width: 340px;
 			margin: 0;
 		}
 		h2{
@@ -19,7 +19,7 @@ header{
 			padding: 5px 0 0 0;
 			margin: 0;
 			vertical-align: top;
-			width: 300px;
+			width: 280px;
 
 		}
 		nav{
@@ -27,7 +27,7 @@ header{
 			display: inline-block;
 			padding: 0 0 5px 0;
 			margin: 0;
-			width: 100px;
+			width: 110px;
 			text-align: right;
 			ul{
 				padding-left: 0;
@@ -58,4 +58,8 @@ footer{
 	#supplementary{
 		max-width: 768px;
 	}
+}
+/* Comment Form */
+#respond {
+	max-width: 668px;
 }

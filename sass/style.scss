@@ -448,15 +448,12 @@ footer{
 #respond .comment-form-email label,
 #respond .comment-form-url label,
 #respond .comment-form-comment label {
-	// background: #eee;
 	color: #555;
 	display: block;
 	font-size: 1.5em;
 	left: 4px;
 	min-width: 60px;
 	padding: 4px 10px;
-	//position: relative;
-	//top: 40px;
 	z-index: 1;
 }
 #respond input[type="text"]:focus,
