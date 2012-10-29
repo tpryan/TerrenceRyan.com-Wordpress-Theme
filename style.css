@@ -655,7 +655,8 @@ a.comment-reply-link > span {
     font-size: 1.1em; }
 
   header {
-    padding-top: 10px; }
+    padding-top: 10px;
+    padding-bottom: 10px; }
     header hgroup {
       max-width: 768px; }
       header hgroup h1 {
