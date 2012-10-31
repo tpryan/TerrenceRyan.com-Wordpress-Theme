@@ -703,3 +703,40 @@ a.comment-reply-link > span {
   /* Comment Form */
   #respond {
     max-width: 668px; } }
+@media screen and (min-width: 1000px) {
+  body {
+    font-size: 1.2em; }
+
+  header {
+    padding-top: 10px; }
+    header hgroup {
+      max-width: 1000px; }
+      header hgroup h1 {
+        display: inline-block;
+        width: 350px;
+        padding: 0 30px 0 0;
+        margin: 0; }
+      header hgroup h2 {
+        display: inline-block;
+        padding: 5px 0 0 0;
+        margin: 0;
+        vertical-align: top;
+        width: 300px; }
+      header hgroup nav {
+        vertical-align: top;
+        display: inline-block;
+        margin: 0;
+        width: 100px;
+        text-align: right; }
+
+  #main {
+    max-width: 1000px; }
+
+  article {
+    font-size: 1.4em; }
+    article p {
+      line-height: 1.6;
+      padding-bottom: 30px; }
+
+  footer #supplementary {
+    max-width: 1000px; } }

@@ -703,6 +703,6 @@ a.comment-reply-link > span {
 	@import 'tablet';
 } 
 
-// @media screen and (min-width: 1000px) {
-// 	@import 'desktop'
-// } 
+@media screen and (min-width: 1000px) {
+	@import 'desktop'
+} 
