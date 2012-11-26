@@ -15,6 +15,12 @@ nav{
 	}
 }
 
+article p, article div {
+	line-height: 1.5;
+	font-size: 1.1em;
+
+}
+
 /* Comment Form */
 #respond {
 	margin: 0 auto 2em auto;
@@ -34,4 +40,5 @@ nav{
 
 footer #first,footer #second, footer #third{
 	display: block;
-}	
+}
+
